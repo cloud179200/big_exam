@@ -39,9 +39,9 @@ body {
   font-size: 36px;
   font-weight: bold;
 }
-#emailForm div input{
+#emailForm div input {
   border-radius: 50px !important;
-  font-family: 'Courier Prime', monospace;
+  font-family: "Courier Prime", monospace;
 }
 .home-footer {
   width: 100%;
@@ -50,21 +50,91 @@ body {
   height: 30px;
   padding: 0 30px;
   font-size: 18px;
-  font-family: 'Courier Prime', monospace;
+  font-family: "Courier Prime", monospace;
 }
-.main-containner{
+.main-containner {
   width: 100%;
-  height: 100%;
-  background-color: antiquewhite;
+  height: auto;
+  background-color: burlywood;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
-.main-navbar{
+.main-navbar {
   width: 100%;
   height: 6vh;
-  background-color: bisque;
+  background-color: beige;
   position: absolute;
   top: 0;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 5px solid black;
+  text-transform: uppercase;
+}
+.navbar-link {
+  height: 100%;
+  padding-right: 15%;
+}
+.navbar-link button {
+  text-transform: uppercase !important;
+}
+.main-content {
+  width: 70%;
+  background-color: beige;
+  margin-top: 6vh;
+}
+.main-content div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subject {
+  margin-top: 10px;
+  border-radius: 40px;
+  border: 5px solid white;
+  width: 85% !important;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s;
+}
+.subject:hover {
+  width: 90% !important;
+  border-color: black;
+}
+.subject:hover > .content {
+  color: black;
+  text-shadow: 0 0 10px #fff;
+  font-size: 56px;
+}
+.subject .content {
+  position: relative;
+  font-size: 48px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-family: "Courier Prime", monospace;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  transition: 0.3s;
+}
+#math {
+  background-image: url("../images/math_subject_background.jpg");
+}
+#history {
+  background-image: url("../images/history_subject_background.jpg");
+}
+#biology {
+  background-image: url("../images/biology_subject_background.jpg");
+}
+#physic {
+  background-image: url("../images/physic_subject_background.jpg");
+}
+.test-content form {
+  margin-top: 10px;
+  width: 90% !important;
 }
