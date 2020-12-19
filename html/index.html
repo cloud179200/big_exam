@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/Semantic-UI-CSS-master/semantic.css" />
+    <link
+      rel="stylesheet"
+      href="../css/Semantic-UI-CSS-master/semantic.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exam Online</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="home-container" style="display: none">
+        <div class="home-header"></div>
+        <div class="home-main">
+          <form id="emailForm">
+            <div class="ui right icon input">
+              <input type="email" placeholder="Enter your email to do the test..." />
+              <i class="arrow right icon"></i>
+            </div>
+          </form>
+        </div>
+        <div class="home-footer">
+          <i class="copyright outline icon"></i> 2020 - LeVietAnh
+        </div>
+      </div>
+      <div class="main-containner">
+        <div class="main-navbar">
+          <div class="navbar-logo">Logo</div>
+          <div class="navbar-link" id="goToDoTest"><span>Do TEST</span></div>
+          <div class="navbar-link" id="goToDoHistory">History</div>
+          <div class="navbar-current-info"></div>
+        </div>
+        <div class="main-content"></div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/component.js"></script>
+  <script src="../js/controller.js"></script>
+  <script src="../js/model.js"></script>
+  <script src="../js/view.js"></script>
+  <script src="../js/index.js"></script>
+</html>

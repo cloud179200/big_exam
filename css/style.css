@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+.home-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/home_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-header {
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/home_header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.home-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#emailForm {
+  width: 50%;
+}
+#emailForm div {
+  width: 100%;
+  font-size: 36px;
+  font-weight: bold;
+}
+#emailForm div input{
+  border-radius: 50px !important;
+  font-family: 'Courier Prime', monospace;
+}
+.home-footer {
+  width: 100%;
+  color: black;
+  text-align: right;
+  height: 30px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-family: 'Courier Prime', monospace;
+}
+.main-containner{
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-navbar{
+  width: 100%;
+  height: 6vh;
+  background-color: bisque;
+  position: absolute;
+  top: 0;
+  display: flex;
+}
