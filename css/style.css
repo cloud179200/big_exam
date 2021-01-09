@@ -61,10 +61,11 @@ body {
 }
 .main-navbar {
   width: 100%;
-  height: 6vh;
+  height: 5vh;
   background-color: beige;
   position: absolute;
   top: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -78,12 +79,18 @@ body {
 .navbar-link button {
   text-transform: uppercase !important;
 }
+.navbar-info-menu{
+}
 .main-content {
+  min-height: 100vh;
   width: 70%;
   background-color: beige;
-  margin-top: 6vh;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.main-content div {
+.subject-content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -91,7 +98,7 @@ body {
   align-items: center;
 }
 .subject {
-  margin-top: 10px;
+  margin: 10px 0;
   border-radius: 40px;
   border: 5px solid white;
   width: 85% !important;
@@ -112,6 +119,7 @@ body {
 }
 .subject .content {
   position: relative;
+  top: 45%;
   font-size: 48px;
   font-weight: bolder;
   color: white;
@@ -134,7 +142,27 @@ body {
 #physic {
   background-image: url("../images/physic_subject_background.jpg");
 }
+.test-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .test-content form {
   margin-top: 10px;
-  width: 90% !important;
+  width: 100% !important;
 }
+.history-content {
+  width: 100%;
+}
+.history {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 24px;
+  padding: 20px 10px;
+  border-bottom: 1px solid  #fff;
+  font-family: "Courier Prime", monospace;
+}
+
