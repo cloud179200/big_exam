@@ -12,30 +12,28 @@
     <link rel="icon" href="../images/exam.png">
 
     <title>Exam Online</title>
+    <script src="../js/index.js"></script>
 </head>
 
 <body>
-    <?php
-    include("db.php");
-    if(!isset($_SESSION["email"])){
-        header("Location:index.php", true, 301);
-    }
-    ?>
     <div id="app">
         <div class="main-containner">
             <div class="main-navbar">
                 <div class="navbar-logo" id="goToHome">
-                    <i class="large big home icon"></i>
+                    <i class="large big home icon" id="homeBtn"></i>
                 </div>
-                <div class="navbar-link ui buttons">
-                    <a href="/dotest">Do Test</a>
-                    <a href="/history">History</a>
-                </div>
-                <div class="navbar-current-info">
-                    <?php echo $_SESSION["email"] ?>
-                    <span id="menuBtn"><i class="chevron down icon"></i>
-                        <div class="navbar-info-menu">Logout</div>
-                    </span>
+                <div class="navbar-info">
+                    <div class="current-email"></div>
+                    <span class="menu-btn"><i class="chevron right icon"></i></span>
+                    <div class="navbar-info-menu">
+                        <ul class="navbar-info-menu-sub">
+                            <form id="actionForm" action="./action.php" method="post" style="display: none;">
+                                <input type="text" name="action">
+                            </form>
+                            <li id="historyBtn"><i class="history icon"></i>History</li>
+                            <li id="logoutBtn"><i class="power off icon"></i>Logout</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="main-content">
@@ -57,5 +55,5 @@
         </div>
     </div>
 </body>
-
+<script src="../js/main.js"></script>
 </html>

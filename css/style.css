@@ -1,3 +1,24 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 body {
   padding: 0;
   margin: 0;
@@ -36,10 +57,24 @@ body {
 }
 #emailForm div {
   width: 100%;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: bold;
 }
 #emailForm div input {
+  padding: 3% 5%;
+  border-radius: 50px !important;
+  font-family: "Courier Prime", monospace;
+}
+#secretStringForm {
+  width: 50%;
+}
+#secretStringForm div {
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+}
+#secretStringForm  div input {
+  padding: 3% 5%;
   border-radius: 50px !important;
   font-family: "Courier Prime", monospace;
 }
@@ -61,25 +96,78 @@ body {
 }
 .main-navbar {
   width: 100%;
+  padding: 0% 15%;
   height: 5vh;
   background-color: beige;
   position: absolute;
+  display: flex;
   top: 0;
   right: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   border-bottom: 5px solid black;
+}
+.navbar-logo {
+  flex-grow: 1;
+}
+.navbar-info {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-email {
+  width: 200px;
+  text-align: right;
+}
+.menu-btn {
+  width: 20px;
+  transition: 0.3s;
+}
+
+.navbar-info:hover > .menu-btn {
+  transform: rotate(90deg);
+}
+.navbar-info:hover > .navbar-info-menu ul {
+  opacity: 1;
+}
+.navbar-info:hover > .navbar-info-menu {
+  z-index: 9999;
+}
+.ui.modal{
+  text-align: center !important;
+}
+.navbar-info-menu {
+  position: absolute;
+  z-index: -9999;
+  top: 5vh;
+  width: 220px;
+  transition: 0.4s;
   text-transform: uppercase;
 }
-.navbar-link {
-  height: 100%;
-  padding-right: 15%;
+
+.navbar-info-menu ul {
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+  list-style: none;
+  border: 3px solid #7f8c8d;
+  border-top: none;
+  background-color: #ecf0f1;
+  color: black;
+  padding: 0;
+  margin: 0;
 }
-.navbar-link button {
-  text-transform: uppercase !important;
+.navbar-info-menu ul li {
+  padding: 5px 10px;
+  transition: 0.2s;
+  cursor: pointer;
 }
-.navbar-info-menu{
+.navbar-info-menu ul li:hover {
+  border-left: 5px solid #7f8c8d;
+}
+.navbar-info-menu ul li i {
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+  border: none;
 }
 .main-content {
   min-height: 100vh;
@@ -153,16 +241,93 @@ body {
   margin-top: 10px;
   width: 100% !important;
 }
+.question-content{
+  font-size: 24px !important;
+}
+.list-question{
+  width: 100%;
+  max-height: 480px;
+  height: fit-content;
+  font-size: 13px !important;
+  padding: 10px 20px;
+  overflow-y: scroll;
+  display: none;
+  border: 3px solid #7f8c8d;
+}
+.question{
+  padding-bottom: 5px;
+  border-bottom: 3px solid  #7f8c8d;
+  transition: 0.3s;
+}
+.question:hover{
+  border-left: 5px solid #7f8c8d;
+
+}
+.grouped{
+  border-bottom: 2px solid #ffffff;
+}
+.countdown-timer{
+  bottom: 5%;
+  right: 5%;
+  text-align: center;
+  font-size: 24px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 99999;
+  border-radius: 40px;
+  border: 3px solid black;
+  background-color: #ffffff;
+}
+.control-btn-group{
+  text-align: end;
+  margin-bottom: 5%;
+}
 .history-content {
   width: 100%;
 }
-.history {
+
+.history-elem {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   font-size: 24px;
-  padding: 20px 10px;
-  border-bottom: 1px solid  #fff;
+  padding: 20px 40px;
+  border-bottom: 3px solid #fff;
   font-family: "Courier Prime", monospace;
+  transition: 0.3s;
 }
-
+.history-elem:hover {
+  border-left: 5px solid #7f8c8d;
+}
+.history-elem div{
+  padding-bottom: 15px;
+}
+.notification-container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  width: fit-content;
+  min-width: 300px;  
+  opacity: 1;
+  transition: 0.5s;
+}
+.admin-content{
+  width: 100%;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 1080px) {
+  #emailForm div {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #secretStringForm div {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
